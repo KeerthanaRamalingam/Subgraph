@@ -7,16 +7,16 @@ const main = async () => {
             {
                 query: `
                 {
-                    
-                    bundle(id: "1" ) {
-                        ethPrice
+                    uniswapFactory(id: "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f"){
+                        pairCount
+                        totalVolumeUSD
+                        totalVolumeETH
                     }
-                       
                    
                 }`
             }
         );
-        console.log(result.data.data.bundle);
+        console.log(result.data.data.uniswapFactory);
     } catch (error) {
         console.log(error);
     }
